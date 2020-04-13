@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "612913234144",
+    "firebase_url": "https://lrtticket.firebaseio.com",
+    "project_id": "lrtticket",
+    "storage_bucket": "lrtticket.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612913234144:android:954ec1b5aa2f75f6ccd085",
+        "android_client_info": {
+          "package_name": "com.example.ticketapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612913234144-8f104mfto8nqbdd8cucarad66mlgp4td.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ticketapp",
+            "certificate_hash": "f01834128f69eb884efa25f08a2a46a510a65c06"
+          }
+        },
+        {
+          "client_id": "612913234144-qmc54dp95jbos73fi9ohi3fqc1ndb138.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRHCQHLXoymPEksDkHVrerkwzWFWjTUy8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612913234144-qmc54dp95jbos73fi9ohi3fqc1ndb138.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
