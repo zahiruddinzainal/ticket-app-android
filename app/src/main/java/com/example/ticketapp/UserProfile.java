@@ -14,7 +14,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import javax.annotation.Nullable;
 
-public class AdminProfile extends AppCompatActivity {
+public class UserProfile extends AppCompatActivity {
 
     TextView mprofileName, mprofileEmail, mprofilePhone, mprofileAddress;
     FirebaseAuth fAuth;

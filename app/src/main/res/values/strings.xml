@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">TicketApp</string>
+
+    <string-array name="Destination">
+        <item>BP - Melaka</item>
+        <item>BP - Johor Bharu</item>
+        <item>BP - TBS</item>
+        <item>BP - Penang</item>
+        <item>BP - Kuantan</item>
+        <item>BP - Alor Setar</item>
+        <item>BP - Kelantan</item>
+    </string-array>
+
 </resources>

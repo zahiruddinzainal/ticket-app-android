@@ -9,7 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdminProfile"/>
+        <activity android:name=".UserCartAdapter"></activity>
+        <activity android:name=".UserViewAdapter" />
+        <activity android:name=".AdminUpdateDeleteAdapter" />
+        <activity android:name=".AdminSalesReport" />
+        <activity android:name=".AdminUpdateDelete" />
+        <activity android:name=".AdminAdd" />
+        <activity android:name=".UserOrder" />
+        <activity android:name=".UserCart" />
+        <activity android:name=".UserView" />
+        <activity android:name=".UserProfile" />
+        <activity android:name=".AdminProfile" />
         <activity android:name=".Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

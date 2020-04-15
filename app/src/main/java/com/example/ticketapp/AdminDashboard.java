@@ -19,13 +19,12 @@ public class AdminDashboard extends AppCompatActivity {
         setContentView(R.layout.admin_dashboard);
 
         //------------------------------------------------- NAV ICON ---------------------------------------
-        /* 3 card belum buat activity.java
         mAddCard = findViewById(R.id.addCard);
         mAddCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent manage = new Intent (AdminDashboard.this, AdminAddTicket.class);
-                startActivity(manage);
+                Intent add = new Intent (AdminDashboard.this, AdminAdd.class);
+                startActivity(add);
             }
         });
 
@@ -34,8 +33,8 @@ public class AdminDashboard extends AppCompatActivity {
         mUpdateDeleteCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent report = new Intent(AdminDashboard.this, AdminUpdateDelete.class);
-                startActivity(report);
+                Intent updatedelete = new Intent(AdminDashboard.this, AdminUpdateDelete.class);
+                startActivity(updatedelete);
             }
         });
 
@@ -43,12 +42,11 @@ public class AdminDashboard extends AppCompatActivity {
         mReportCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent staff = new Intent(AdminDashboard.this, AdminReport.class);
-                startActivity(staff);
+                Intent report = new Intent(AdminDashboard.this, AdminSalesReport.class);
+                startActivity(report);
             }
         });
 
-         */
 
         mProfileCard = findViewById(R.id.profileCard);
         mProfileCard.setOnClickListener(new View.OnClickListener() {
