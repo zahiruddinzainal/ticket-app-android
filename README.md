@@ -2,7 +2,7 @@
 
 ## Here is the screenshot of the app 
 
-![Image](https://github.com/zahiruddinzainal/Ticket.my_TicketBookingApplication/blob/master/screenshots/1.png | width=100) 
+![Image](https://github.com/zahiruddinzainal/Ticket.my_TicketBookingApplication/blob/master/screenshots/1.png){:height="50%" width="50%"}
 ![Image](https://github.com/zahiruddinzainal/Ticket.my_TicketBookingApplication/blob/master/screenshots/2.png)
 ![Image](https://github.com/zahiruddinzainal/Ticket.my_TicketBookingApplication/blob/master/screenshots/3.png)
 ![Image](https://github.com/zahiruddinzainal/Ticket.my_TicketBookingApplication/blob/master/screenshots/4.png)
