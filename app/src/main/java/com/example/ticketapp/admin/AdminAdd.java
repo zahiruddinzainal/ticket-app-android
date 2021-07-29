@@ -36,8 +36,10 @@ public class AdminAdd extends AppCompatActivity implements AdapterView.OnItemSel
 
     private Button mButtonChooseImage;
     private Button mButtonUpload;
-    private EditText mNamaMenu;
-    private EditText mHargaMenu;
+    private EditText mDestination;
+    private EditText mGateNumber;
+    private EditText mDateTicket;
+    private EditText mTime;
     private ImageView mImageView;
     private ProgressBar mProgressBar;
     private Uri mImageUri;
@@ -61,8 +63,10 @@ public class AdminAdd extends AppCompatActivity implements AdapterView.OnItemSel
 
         mButtonChooseImage = findViewById(R.id.button_choose_image);
         mButtonUpload = findViewById(R.id.button_upload);
-        mNamaMenu = findViewById(R.id.namaMenu);
-        mHargaMenu = findViewById(R.id.hargaMenu);
+        mDestination = findViewById(R.id.namaMenu);
+        mGateNumber = findViewById(R.id.gateNumber);
+        mDateTicket = findViewById(R.id.dateTicket);
+        mTime = findViewById(R.id.time);
         mImageView = findViewById(R.id.image_view);
         mProgressBar = findViewById(R.id.progress_bar);
         spinnercategory = (Spinner) findViewById(R.id.spinnercategory);
@@ -138,8 +142,10 @@ public class AdminAdd extends AppCompatActivity implements AdapterView.OnItemSel
 
                             Upload upload = new Upload(
                                     spinnercategory.getSelectedItem().toString().trim(),
-                                    mNamaMenu.getText().toString().trim(),
-                                    mHargaMenu.getText().toString().trim(),
+                                    mDestination.getText().toString().trim(),
+                                    mTime.getText().toString().trim(),
+                                    mGateNumber.getText().toString().trim(),
+                                    mDateTicket.getText().toString().trim(),
                                     downloadUrl.toString());
 
                             String uploadId = mDatabaseRef.push().getKey();

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="330dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/default_transparent_color_xml"
+    android:visibility="visible">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/default_transparent_color_xml"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.127">
+
+                <TextView
+                    android:id="@+id/dialog_info"
+                    android:fontFamily="@font/proximanovabold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#1d1d1d"
+                    android:text="Sahkan maklumat?" />
+
+                <TextView
+                    android:id="@+id/dialog_name"
+                    android:fontFamily="@font/proximanovaregular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dialog_info"
+                    android:layout_margin="10dp"
+                    android:text="Name: null" />
+
+                <TextView
+                    android:id="@+id/dialog_address"
+                    android:fontFamily="@font/proximanovaregular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dialog_name"
+                    android:layout_margin="10dp"
+                    android:text="Address: null" />
+
+                <TextView
+                    android:id="@+id/dialog_total"
+                    android:fontFamily="@font/proximanovaregular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dialog_address"
+                    android:layout_margin="10dp"
+                    android:text="Total to be paid: null" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Kemaskini maklumat"
+                android:background="#DADADA"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+            <Button
+                android:id="@+id/alert_proceed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#1d1d1d"
+                android:textColor="#FFFFFF"
+                android:onClick="alertProceed"
+                android:text="BAYAR"
+                app:layout_constraintTop_toBottomOf="@+id/edit" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

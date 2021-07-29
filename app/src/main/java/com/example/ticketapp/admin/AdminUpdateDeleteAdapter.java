@@ -47,8 +47,10 @@ public class AdminUpdateDeleteAdapter extends RecyclerView.Adapter<AdminUpdateDe
         String gambarmenu = uploadCurrent.getImageUrl();
 
         holder.yDestination.setText("Destination: " + uploadCurrent.getDestination()); //nak retrieve nama dari database
-        holder.yMasa.setText("Departure time: " + uploadCurrent.getTime()); //nak retrieve nama dari database
-        holder.yHarga.setText("Price: RM " + uploadCurrent.getHarga()); //nak retrieve harga dari database
+        holder.yGateNumber.setText("Gate number: " + uploadCurrent.getGateNumber()); //nak retrieve nama dari database
+        holder.yDate.setText("Departure: " + uploadCurrent.getDate()); //nak retrieve nama dari database
+        holder.yTime.setText("(" + uploadCurrent.getTime() + ")"); //nak retrieve nama dari database
+        holder.yHarga.setText("Price: " + uploadCurrent.getHarga()); //nak retrieve harga dari database
         Picasso.get()
                 .load(gambarmenu)
                 .placeholder(R.drawable.placeholder)
@@ -66,7 +68,9 @@ public class AdminUpdateDeleteAdapter extends RecyclerView.Adapter<AdminUpdateDe
     public class ImageViewHolder extends RecyclerView.ViewHolder {
 
         public TextView yDestination;
-        public TextView yMasa;
+        public TextView yGateNumber;
+        public TextView yDate;
+        public TextView yTime;
         public TextView yHarga;
         public ImageView yGambar;
         Button mdeleteTicket;
@@ -75,7 +79,9 @@ public class AdminUpdateDeleteAdapter extends RecyclerView.Adapter<AdminUpdateDe
             super(itemView);
 
             yDestination = itemView.findViewById(R.id.xDestination);
-            yMasa = itemView.findViewById(R.id.xMasa);
+            yGateNumber = itemView.findViewById(R.id.xGateNumber);
+            yDate = itemView.findViewById(R.id.xDate);
+            yTime = itemView.findViewById(R.id.xTime);
             yHarga = itemView.findViewById(R.id.xHarga);
             yGambar = itemView.findViewById(R.id.xGambar);
 

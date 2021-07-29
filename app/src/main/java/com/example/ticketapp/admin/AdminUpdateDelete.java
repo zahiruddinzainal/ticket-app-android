@@ -18,8 +18,9 @@ import com.google.firebase.storage.FirebaseStorage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserView extends AppCompatActivity {
+public class AdminUpdateDelete extends AppCompatActivity {
 
+    TextView mTotal;
 
     String userID;
     FirebaseAuth fAuth;
@@ -27,7 +28,7 @@ public class UserView extends AppCompatActivity {
 
     private DatabaseReference mTicketDatabase;
     private RecyclerView mRecyclerView;
-    private UserViewAdapter mAdapter;
+    private AdminUpdateDeleteAdapter mAdapter;
     private FirebaseStorage mStorage;
     private DatabaseReference mDatabaseRef;
     private ValueEventListener mDBListener;
@@ -37,7 +38,7 @@ public class UserView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_view);
+        setContentView(R.layout.admin_update_delete);
 
 
         fAuth  = FirebaseAuth.getInstance();
@@ -49,7 +50,7 @@ public class UserView extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mUpload = new ArrayList<>();
-        mAdapter = new UserViewAdapter(UserView.this, mUpload);
+        mAdapter = new AdminUpdateDeleteAdapter(AdminUpdateDelete.this, mUpload);
         mRecyclerView.setAdapter(mAdapter);
         mStorage = FirebaseStorage.getInstance();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("tickets"); //GET PATH REFERENCE OF TICKETS DATABASE
@@ -73,7 +74,7 @@ public class UserView extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(UserView.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(AdminUpdateDelete.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -88,33 +89,31 @@ public class UserView extends AppCompatActivity {
     }
 
 
-    public void onAddToCart(View view) {
+    public void onDeleteTicket(View view) {
 
-        int position = (int) view.getTag();
-        int j = 1;
+        int pos = (int) view.getTag();
+
+        Upload selectedItem = mUpload.get(pos);
+        final String selectedKey = selectedItem.getKey();
+
         fAuth  = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         userID = fAuth.getCurrentUser().getUid();
 
-
         FirebaseDatabase x = FirebaseDatabase.getInstance();
-        DatabaseReference y = x.getReference("cart").push();
+        x.getReference("tickets").child(selectedKey).removeValue();
+
+        String destnationTemp = selectedItem.getDestination();
+
+        Toast.makeText(AdminUpdateDelete.this, "Ticket: " + destnationTemp + " deleted from database"  , Toast.LENGTH_SHORT).show();
 
 
-        Upload uploadCurrent = mUpload.get(position);
-        String destinationTemp = uploadCurrent.getDestination();
-        String masaTemp = uploadCurrent.getTime();
-        String hargaTemp = uploadCurrent.getHarga();
-        String gambar = uploadCurrent.getImageUrl();
+    }
 
-        y.child("jumlah").setValue(j);
-        y.child("destination").setValue(destinationTemp);
-        y.child("time").setValue(masaTemp);
-        y.child("harga").setValue(hargaTemp);
-        y.child("imageUrl").setValue(gambar);
-        y.child("cumulativeTotal").setValue(hargaTemp);
+    public void onUpdateAction(View view) {
 
-        Toast.makeText(this,  "Ticket: " + destinationTemp  + " added to cart", Toast.LENGTH_SHORT).show();
+        Toast.makeText(AdminUpdateDelete.this, "Not done yet"  , Toast.LENGTH_SHORT).show();
+
 
     }
 

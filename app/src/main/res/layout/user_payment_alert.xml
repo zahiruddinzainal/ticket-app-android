@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/transparent_color_xml"
+    android:visibility="visible">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/transparent_color_xml"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.127">
+
+                <TextView
+                    android:id="@+id/dialog_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Confirm details?" />
+
+                <TextView
+                    android:id="@+id/dialog_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dialog_info"
+                    android:layout_margin="10dp"
+                    android:text="Name" />
+
+                <TextView
+                    android:id="@+id/dialog_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dialog_name"
+                    android:layout_margin="10dp"
+                    android:text="Address" />
+
+                <TextView
+                    android:id="@+id/dialog_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dialog_address"
+                    android:layout_margin="10dp"
+                    android:text="Total to be paid:" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.50"
+                android:text="Edit details"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+            <Button
+                android:id="@+id/alert_proceed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.50"
+                android:onClick="alertProceed"
+                android:text="Proceed"
+                app:layout_constraintTop_toBottomOf="@+id/edit" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
